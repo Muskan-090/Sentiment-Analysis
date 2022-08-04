@@ -1,2 +1,6 @@
-web: python manage.py collectstatic --no-input;
+web: python manage.py collectstatic --no-input
 web: gunicorn NlPs.wsgi
+web: gunicorn NlPs.wsgi --log-file
+release: python manage.py makemigrations --noinput
+release: python manage.py collectstatic --noinput
+release: python manage.py migrate --noinput
