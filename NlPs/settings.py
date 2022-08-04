@@ -25,7 +25,7 @@ SECRET_KEY = 'jv5n84nnbhm$d$inhplu_r&duohhnq=ofrf6a(hnjys_^)w2_m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nlp-9.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -120,5 +120,6 @@ USE_TZ = True
 
 import os
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles'), ]
+
+CORS_ORIGIN_ALLOW_ALL = True
+django_heroku.settings(locals())
