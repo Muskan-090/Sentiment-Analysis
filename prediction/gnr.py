@@ -9,7 +9,7 @@ from . import Nps
 
 
 df_train = pd.read_csv('C:\\Users\\user\\OneDrive\\Desktop\\MS\\NLP\\NlPs\\prediction\\data\\training_twitter_x_y_train.csv')
-df_test = pd.read_csv('C:\\Users\\user\\OneDrive\\Desktop\\MS\\NLP\\NlPs\\prediction\\data\\test_twitter_x_test.csv')
+# df_test = pd.read_csv('C:\\Users\\user\\OneDrive\\Desktop\\MS\\NLP\\NlPs\\prediction\\data\\test_twitter_x_test.csv')
 
 # a = df_train.airline_sentiment=='negative'
 # b = df_train.airline_sentiment =='positive'
