@@ -6,7 +6,7 @@ from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 
 df_train = pd.read_csv('C:\\Users\\user\\OneDrive\\Desktop\\MS\\NLP\\NlPs\\prediction\\data\\training_twitter_x_y_train.csv')
-df_test = pd.read_csv('C:\\Users\\user\\OneDrive\\Desktop\\MS\\NLP\\NlPs\\prediction\\data\\test_twitter_x_test.csv')
+# df_test = pd.read_csv('C:\\Users\\user\\OneDrive\\Desktop\\MS\\NLP\\NlPs\\prediction\\data\\test_twitter_x_test.csv')
 
 a = df_train.airline_sentiment=='negative'
 b = df_train.airline_sentiment =='positive'
@@ -39,7 +39,7 @@ model.add(Dense(vocab_size,activation='relu'))
 model.add(Dense(1,activation='sigmoid'))
 model.compile(loss = 'binary_crossentropy', optimizer='adam',metrics = ['accuracy'])
 # print(model.summary())
-model.fit(X, y, epochs =1 ,batch_size = 500)
+model.fit(X, y, epochs =3 ,batch_size = 500)
 # serialize model to JSON
 model_json = model.to_json()
 with open("model.json", "w") as json_file:
