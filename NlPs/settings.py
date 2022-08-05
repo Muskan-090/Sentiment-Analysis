@@ -25,7 +25,7 @@ SECRET_KEY = 'jv5n84nnbhm$d$inhplu_r&duohhnq=ofrf6a(hnjys_^)w2_m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nlp-9.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['nlp-09.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -118,7 +118,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-import os
+
 STATIC_URL = '/static/'
 
 CORS_ORIGIN_ALLOW_ALL = True
