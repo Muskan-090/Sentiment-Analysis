@@ -1,1 +1,1 @@
-web: gunicorn NlPs.wsgi
+web: gunicorn NlPs.wsgi --log-file
