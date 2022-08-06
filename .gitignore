@@ -90,12 +90,6 @@ ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
 
 # mkdocs documentation
 /site
@@ -103,36 +97,20 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-# pycharm
-.idea/
-
 # datafiles
 packages/regression_model/regression_model/datasets/*.csv
 packages/regression_model/regression_model/datasets/*.zip
 packages/regression_model/regression_model/datasets/*.txt
-train.csv
-test.csv
+data/train.csv
 raw.csv
-data_description.txt
-house-prices-advanced-regression-techniques.zip
-sample_submission.csv
-test_data_predictions.csv
-v2-plant-seedlings-dataset/
-v2-plant-seedlings-dataset.zip
+
 
 # all logs
 logs/
 
-# trained models (will be created in CI)
-section-05-production-model-package/regression_model/trained_models/*.pkl
-packages/regression_model/regression_model/trained_models/*.pkl
-packages/neural_network_model/neural_network_model/trained_models/*.pkl
-packages/neural_network_model/neural_network_model/trained_models/*.h5
-*.h5
-packages/neural_network_model/neural_network_model/datasets/training_data_reference.txt
+
+*model.h5
+*model.json
 *.pkl
 
-.DS_Store
 
-kaggle.json
-packages/ml_api/uploads/*
