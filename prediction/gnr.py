@@ -5,10 +5,10 @@ from keras.layers import Dense, Embedding, LSTM
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import load_model, model_from_json
-from . import Nps
 
 
-df_train = pd.read_csv('C:\\Users\\user\\OneDrive\\Desktop\\MS\\NLP\\NlPs\\prediction\\data\\training_twitter_x_y_train.csv')
+
+# df_train = pd.read_csv('C:\\Users\\user\\OneDrive\\Desktop\\MS\\NLP\\NlPs\\prediction\\data\\training_twitter_x_y_train.csv')
 # df_test = pd.read_csv('C:\\Users\\user\\OneDrive\\Desktop\\MS\\NLP\\NlPs\\prediction\\data\\test_twitter_x_test.csv')
 
 # a = df_train.airline_sentiment=='negative'
@@ -66,11 +66,12 @@ def Movie_reviews(txt):
  
     # evaluate loaded model on test data
     loaded_model.compile(loss='binary_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
-    score = loaded_model.evaluate(Nps.X, Nps.y, verbose=0)
-    print("%s: %.2f%%" % (loaded_model.metrics_names[1], score[1]*100))
+    # score = loaded_model.evaluate(X, y, verbose=0)
+    # print("%s: %.2f%%" % (loaded_model.metrics_names[1], score[1]*100))
         
+    tokenizer = Tokenizer(split=' ')
     
-    text = Nps.tokenizer.texts_to_sequences(txt)
+    text = tokenizer.texts_to_sequences(txt)
     padded = pad_sequences(text,33)
     predicted = np.argmax(loaded_model.predict(padded),axis = -1)
 
