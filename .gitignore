@@ -4,13 +4,21 @@ __pycache__/
 *$py.class
 *prediction/model.json
 *prediction/model.h5
-
+/tmp/build_818ed513/staticfiles/
+model.json/
+model.h5
 
 # C extensions
 *.so
 
 # Distribution / packaging
 .Python
+pandas/
+numpy/
+tensorflow/
+Keras-Preprocessing/
+h5py/
+keras/
 build/
 develop-eggs/
 dist/
