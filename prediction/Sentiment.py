@@ -75,9 +75,8 @@ def Movie_reviews(txt):
     padded = pad_sequences(text,33)
     predicted = np.argmax(loaded_model.predict(padded),axis = -1)
 
-    positive = len(predicted[predicted==1])
-    negative = len(predicted[predicted==0])
-    if positive>negative:
+    
+    if predicted[0]>0.5:
         return "positive"
         
     else:
